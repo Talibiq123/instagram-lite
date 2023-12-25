@@ -1,10 +1,13 @@
 import './App.css';
+import Signup from './Components.js/Signup';
+
+import {Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1>IG</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Signup/>}/>
+    </Routes>
   );
 }
 
