@@ -3,7 +3,7 @@ import axios from "axios";
 import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
 
-// import instaApi from "../utilities/instaApi";
+import instaApi from "../utilities/instaApi";
 
 
 const Signup = () => {
@@ -36,7 +36,7 @@ const Signup = () => {
 
       try{
             const response =  await axios.post("https://instagram-express-app.vercel.app/api/auth/signup", {name, email, password})
-            // instaApi.post("/auth/signup", {name, email, password})
+            instaApi.post("/auth/signup", {name, email, password})
             
             setSuccess(response.data.message)
             setError("")

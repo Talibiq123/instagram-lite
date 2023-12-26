@@ -1,14 +1,22 @@
-import './App.css';
-import Signup from './Components.js/Signup';
+import React from "react"; 
+import Signup from "./Components/Signup"; 
+import Login from "./Components/Login";
+import Home from "./Components/Home";
 
 import {Routes, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Signup/>}/>
-    </Routes>
-  );
+
+const App = () => {
+    return(
+        <div>
+            <Routes>
+                <Route path="/" element={<Signup />}/>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/home" element={<Home/>}/>
+
+            </Routes>
+        </div>
+    )
 }
 
 export default App;
